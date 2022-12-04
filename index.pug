@@ -1,0 +1,22 @@
+include mixins/mixins
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Multi Step Form
+    link(rel="stylesheet", href="./style.css")
+  body
+    .component
+      header.component__header
+        +nums(4, ['your info', 'Select plan', 'add-ons', 'summary'])
+      main.component__card
+        include pages/page-1
+      footer.component__footer
+        .footer 
+          .footer__button.footer__button_previous.footer__button_invisible Go Back
+          .footer__button.footer__button_next Next Step
+    script(src='./js/masked-field.js')
+    script(src="./js/app.js")

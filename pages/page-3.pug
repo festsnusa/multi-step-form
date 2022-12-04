@@ -1,0 +1,10 @@
+include ../mixins/mixins
+
+.card 
+	h1.card__title Pick add-ons
+	p.card__subtitle Add-ons help enhance your gaming experience.
+	+checkbox([
+		{"title": "Online service", "subtitle": "Access to multiplayer games"},
+		{"title": "Larger storage", "subtitle": "Extra 1TB of cloud save"},
+		{"title": "Customizable Profile", "subtitle": "Custom theme on your profile"}
+		])

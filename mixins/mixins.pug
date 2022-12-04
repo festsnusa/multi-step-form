@@ -1,0 +1,49 @@
+mixin nums(num, arr)
+  .header
+    ul.header__link 
+      -let i = 1
+      while i<=num
+        .header__box
+          li.header__item= i
+          .header__text-section
+            p.header__title= `Step ${i}`
+            p.header__subtitle= arr[i-1]
+            -i++
+
+mixin input(data)
+  .input
+    each value in data
+      .input__header
+        p.input__title= value["name"]
+        p.input__subtitle This field is required
+      input.input__box(name= value["name"] placeholder= value["placeholder"])
+
+mixin options(data)
+  .options 
+    each value in data 
+      .options__box 
+        img.options__image(src= value["src"], alt= value["title"])
+        .options__group 
+          .options__title= value["title"]
+          .options__subtitle= value["subtitle"]
+          .options__bonus.options__bonus_invisible 2 months free
+
+mixin toggle 
+  .toggle 
+    p.toggle__monthly.toggle__active Monthly 
+    li.toggle__item
+      label.toggle__label
+        input.toggle__input(type="checkbox")
+    p.toggle__yearly Yearly
+
+mixin checkbox(data)
+  .checkbox
+    each value in data
+      label.checkbox__label
+        .checkbox__item
+          .checkbox__group
+            input.checkbox__input(type="checkbox")
+            .checkbox__box 
+              .checkbox__title= value["title"]
+              .checkbox__subtitle= value["subtitle"]
+          p.checkbox__price

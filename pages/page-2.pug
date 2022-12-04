@@ -1,0 +1,11 @@
+include ../mixins/mixins
+
+.card 
+	h1.card__title Select your plan
+	p.card__subtitle You have the option of monthly or yearly billing.
+	+options([
+		{"title": "Arcade", "subtitle": "$9/mo", "src": "/assets/images/icon-arcade.svg"},
+		{"title": "Advanced", "subtitle": "$12/mo", "src": "/assets/images/icon-advanced.svg"},
+		{"title": "Pro", "subtitle": "$15/mo", "src": "/assets/images/icon-pro.svg"}
+		])
+	+toggle

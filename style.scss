@@ -1,0 +1,490 @@
+// @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+$blue: hsl(213, 96%, 18%);
+$bluePurple: hsl(243, 100%, 62%);
+$bluePastel: hsl(228, 100%, 84%);
+$blueLight: hsl(206, 94%, 87%);
+$red: hsl(354, 84%, 57%);
+
+$gray: hsl(231, 11%, 63%);
+$grayLight: hsl(229, 24%, 87%);
+$magnolia: hsl(217, 100%, 97%);
+$alabaster: hsl(231, 100%, 99%);
+$white: hsl(0, 0%, 100%);
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./assets/fonts/Ubuntu-Regular.ttf') format('ttf'),
+  url('./assets/fonts/Ubuntu-Regular.woff') format('woff'),
+  url('./assets/fonts/Ubuntu-Regular.svg') format('svg'),
+  url('./assets/fonts/Ubuntu-Regular.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  src: url('./assets/fonts/Ubuntu-Medium.ttf') format('ttf'),
+  url('./assets/fonts/Ubuntu-Medium.woff') format('woff'),
+  url('./assets/fonts/Ubuntu-Medium.svg') format('svg'),
+  url('./assets/fonts/Ubuntu-Medium.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu Bold';
+  src: url('./assets/fonts/Ubuntu-Bold.ttf') format('ttf'),
+  url('./assets/fonts/Ubuntu-Bold.woff') format('woff'),
+  url('./assets/fonts/Ubuntu-Bold.svg') format('svg'),
+  url('./assets/fonts/Ubuntu-Bold.otf') format('otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+hr {
+  border-bottom: 1px $blue;
+}
+
+.component {
+
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  margin: 0 auto;
+  border: 1px solid $blue;
+  border-radius: 5px;
+
+  &__card {
+    background-color: $alabaster;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__footer {
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    &_invisible {
+      display: none;
+    }
+  }
+
+}
+
+.header {
+
+  background-image: url('./assets/images/bg-sidebar-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  height: 20vh;
+
+  &__link {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__item {
+
+    color: $white;
+    border-radius: 50%;
+    border: 1px solid $white;
+    background-color: $bluePurple;
+    font-weight: 700;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_active {
+      background-color: #fff;
+      color: $blue;
+    }
+
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__text-section {
+    display: none;
+  }
+
+  &__title, &__subtitle {
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: $alabaster;
+  }
+
+  &__subtitle {
+    color: $white;
+    font-weight: 700;
+  }
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid black;
+  background-color: $white;
+  padding: 1.5rem;
+  margin: -5rem 1rem 1rem;
+  border-radius: 10px;
+
+  &__title {
+    font-family: 'Ubuntu Bold';
+  }
+
+  &__subtitle {
+    color: $gray;
+  }
+
+}
+
+.input {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: $blue;
+  }
+
+  &__subtitle {
+    visibility: hidden;
+    &_active {
+      visibility: visible;
+      color: $red;
+    }
+  }
+
+  &__box {
+    width: 100%;
+    border-radius: 5px;
+    border: 0.5px solid $gray;
+    padding: 0.7rem 0;
+    margin-bottom: 1rem;
+
+    &_red {
+      border-color: $red;
+    }
+  }
+}
+
+.footer {
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__button {
+    padding: 1rem;
+    
+    color: $white;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &_invisible {
+      visibility: hidden;
+    }
+
+    &_previous {
+      color: $gray;
+      font-weight: 700;
+    }
+
+    &_next {
+      background-color: $blue;
+    }
+
+    &_blue {
+      background-color: $bluePurple;
+    }
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  &__box {
+    display: flex;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+
+    &_active {
+      border-color: $bluePurple;
+    }
+  }
+
+  &__image {
+    margin-right: 0.8rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__title {
+    color: $blue;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    color: $gray;
+  }
+
+  &__bonus {
+    color: $bluePurple;
+    display: block;
+
+    &_invisible {
+      display: none;
+    }
+  }
+}
+
+.toggle {
+  background-color: $magnolia;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem;
+
+  &__active {
+    font-weight: 700;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__input {
+    position: absolute;
+    appearance: none;
+    background: transparent;
+    height: 1.25rem;
+    width: 2.5rem;
+    cursor: pointer;
+    border: 1px solid $blue;
+    border-radius: 20px;
+    background-color: $blue;
+
+    &:checked {
+      border-color: $blue;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      top: 3px;
+      left: 2px;
+      background: $white;
+      transition: .25s;
+    }
+
+    &:checked:before {
+      left: 24px;
+      background: $white;
+    }
+  }
+
+  &__monthly {
+    padding-right: 0.5rem;
+  }
+
+  &__yearly {
+    padding-left: 3rem;
+  }
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+
+    &_active {
+      border-color: $bluePurple;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+  }
+
+  &__group {
+    display: flex;
+  }
+
+  &__input {
+    margin-right: 0.6rem;
+  }
+
+  &__price {
+    color: $bluePurple;
+  }
+}
+
+.cart {
+  background-color: $magnolia;
+  border-radius: 10px;
+  padding: 1rem;
+
+  &__option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &--title, &--price {
+      font-weight: 700;
+    }
+
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
+
+.addons {
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    color: $gray;
+  }
+
+  &__price {
+    color: $blue;
+    font-weight: 500;
+  }
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  &__title {
+    color: $gray;
+  }
+
+  &__result {
+    color: $bluePurple;
+  }
+}
+
+.final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem 2rem 3rem;
+
+  &__image {
+    max-width: 3rem;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    line-height: 1.6rem;
+    color: $gray;
+  }
+}
+
+@media (min-width: 1440px) {
+  
+  .component {
+    padding: 1rem;
+    display: grid;
+    grid-template-areas:
+    "header card"
+    "header footer";
+  }
+
+  .header {
+
+    grid-area: header;
+    height: 50vh;
+    border-radius: 0.625rem;
+
+    &__link {
+      flex-direction: column;
+    }
+
+    &__text-section {
+      display: block;
+    }
+  }
+
+  .card {
+    margin: 0;
+    border: none;
+    grid-area: card;
+  }
+
+  .footer {
+    position: relative;
+    left: 25.5rem;
+    grid-area: footer;
+  }
+
+  .options {
+    flex-direction: row;
+
+    &__box {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}

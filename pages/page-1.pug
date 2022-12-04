@@ -1,0 +1,10 @@
+include ../mixins/mixins
+
+.card 
+	h1.card__title Personal info
+	p.card__subtitle Please provide your name, email address, and phone number.
+	+input([
+		{"name": "Name", "placeholder": "e.g. Stephen King"},
+		{"name": "Email Address", "placeholder": "e.g. stephenking@lorem.com"},
+		{"name": "Phone Number", "placeholder": "e.g. +1 234 567 890"}
+		])

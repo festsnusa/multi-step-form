@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Step Form</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="component">
+      <header class="component__header">
+        <div class="header">
+          <ul class="header__link"> 
+            <div class="header__box">
+              <li class="header__item">1</li>
+              <div class="header__text-section">
+                <p class="header__title">Step 1</p>
+                <p class="header__subtitle">your info</p>
+              </div>
+            </div>
+            <div class="header__box">
+              <li class="header__item">2</li>
+              <div class="header__text-section">
+                <p class="header__title">Step 2</p>
+                <p class="header__subtitle">Select plan</p>
+              </div>
+            </div>
+            <div class="header__box">
+              <li class="header__item">3</li>
+              <div class="header__text-section">
+                <p class="header__title">Step 3</p>
+                <p class="header__subtitle">add-ons</p>
+              </div>
+            </div>
+            <div class="header__box">
+              <li class="header__item">4</li>
+              <div class="header__text-section">
+                <p class="header__title">Step 4</p>
+                <p class="header__subtitle">summary</p>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </header>
+      <main class="component__card">
+        <div class="card"> 
+          <h1 class="card__title">Personal info</h1>
+          <p class="card__subtitle">Please provide your name, email address, and phone number.</p>
+                  <div class="input">
+                    <div class="input__header">
+                      <p class="input__title">Name</p>
+                      <p class="input__subtitle">This field is required</p>
+                    </div>
+                    <input class="input__box" name="Name" placeholder="e.g. Stephen King">
+                    <div class="input__header">
+                      <p class="input__title">Email Address</p>
+                      <p class="input__subtitle">This field is required</p>
+                    </div>
+                    <input class="input__box" name="Email Address" placeholder="e.g. stephenking@lorem.com">
+                    <div class="input__header">
+                      <p class="input__title">Phone Number</p>
+                      <p class="input__subtitle">This field is required</p>
+                    </div>
+                    <input class="input__box" name="Phone Number" placeholder="e.g. +1 234 567 890">
+                  </div>
+        </div>
+      </main>
+      <footer class="component__footer">
+        <div class="footer"> 
+          <div class="footer__button footer__button_previous footer__button_invisible">Go Back</div>
+          <div class="footer__button footer__button_next">Next Step</div>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/masked-field.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
